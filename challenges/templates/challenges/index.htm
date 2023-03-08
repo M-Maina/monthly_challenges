@@ -1,0 +1,18 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>All Challenge</title>
+    <meta name="description" content="This is a description of the page." />
+  </head>
+  <body>
+    <ul>
+        {% for month in months %}
+        <li><a href="{% url "month-challenge" month %}">{{month}}</li>
+        
+        {% endfor %}
+    </ul>
+  </body>
+
+
+</html>
