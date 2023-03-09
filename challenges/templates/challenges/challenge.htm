@@ -1,18 +1,15 @@
+{% extends "base.htm" %}
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>{{month_name}} Challenge</title>
-    <meta name="description" content="This is a description of the page." />
-  </head>
-  <body>
-    <h1>This {{month_name|title }} challenge</h1>
+{% block title %} {{month_name}} Challenge {% endblock %}
+
+
+{% block body %}
+{%include "challenges/includes/navbar.htm" with active_page="challenge" %}
+
+<h1>This {{month_name|title }} challenge</h1>
     {% if challenge_text is not None%}
     <p>{{challenge_text}}</p>
     {% else %}
     <p>There is no challenge for this month</p>
     {% endif %}
-  </body>
-
-
-</html>
+{% endblock %}
